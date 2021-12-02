@@ -8,6 +8,7 @@ var porco1, porco2;
 var tronco1, tronco2, tronco3, tronco4;
 var bird1;
 var fundo;
+var plataforma;
 
 function preload(){
   fundo = loadImage("sprites/bg.png");
@@ -38,6 +39,8 @@ function setup() {
 
   bird1 = new Passaro(100,100);
 
+  plataforma = new Solo(150, 305, 300, 180);
+
   Engine.run(engine);
 }
 
@@ -61,4 +64,6 @@ function draw() {
   tronco4.display();
 
   bird1.display();
+
+  plataforma.display();
 }
